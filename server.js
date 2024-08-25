@@ -17,12 +17,13 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-const corsOptions = {
-  origin: ['https://suleman-blog-app.netlify.app/register'],
-  optionsSuccessStatus: 200
-};
+const allowedOrigins = ['https://suleman-blog-app.netlify.app'];
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 app.use('/auth', authRoutes);
 app.use('/', postRoutes);
