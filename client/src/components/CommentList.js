@@ -25,7 +25,7 @@ const CommentList = ({ postId }) => {
       const headers = {
         'Authorization': `Bearer ${token}`
       };
-      await axios.post(`http://localhost:5000/posts/${postId}/comments`, { post: postId, content: newComment }, { headers });
+      await axios.post(`https://blog-app-5fnw.onrender.com/posts/${postId}/comments`, { post: postId, content: newComment }, { headers });
       setNewComment('');
       // Refresh comments
       const response = await axios.get(`http://localhost:5000/posts/${postId}/comments`);

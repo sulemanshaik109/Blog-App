@@ -58,6 +58,8 @@
     border-radius: 10px;
     color: #ffffff;
     font-size: 16px;
+    cursor: pointer;
+    outline: none;
 }
 
 .btn {

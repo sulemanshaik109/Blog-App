@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ['https://suleman-notes-app.netlify.app'],
+  origin: ['https://suleman-blog-app.netlify.app/register'],
   optionsSuccessStatus: 200
 };
 

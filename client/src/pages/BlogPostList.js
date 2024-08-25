@@ -9,7 +9,7 @@ const BlogPostList = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/posts');
+        const response = await axios.get('https://blog-app-5fnw.onrender.com/posts');
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error.response.data.message);

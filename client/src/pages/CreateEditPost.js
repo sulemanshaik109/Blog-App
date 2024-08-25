@@ -13,7 +13,7 @@ const CreateEditPost = () => {
     if (id) {
       const fetchPost = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/posts/${id}`);
+          const response = await axios.get(`https://blog-app-5fnw.onrender.com/posts/${id}`);
           setTitle(response.data.title);
           setContent(response.data.content);
         } catch (error) {
@@ -42,9 +42,9 @@ const CreateEditPost = () => {
 
       const postData = {title, content};
       if (id) {
-        await axios.put(`http://localhost:5000/posts/${id}`, postData, config);
+        await axios.put(`https://blog-app-5fnw.onrender.com/posts/${id}`, postData, config);
       } else {
-        await axios.post('http://localhost:5000/posts', postData, config);
+        await axios.post('https://blog-app-5fnw.onrender.com/posts', postData, config);
       }
       navigate('/');
     } catch (error) {

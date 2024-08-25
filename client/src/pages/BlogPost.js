@@ -13,7 +13,7 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/posts/${id}`);
+        const response = await axios.get(`https://blog-app-5fnw.onrender.com/posts/${id}`);
         setPost(response.data);
       } catch (error) {
         console.error('Error fetching post:', error.response.data.message);
@@ -25,7 +25,7 @@ const BlogPost = () => {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/posts/${post.id}`, {
+      await axios.delete(`https://blog-app-5fnw.onrender.com/posts/${post.id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

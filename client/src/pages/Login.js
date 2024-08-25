@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { username, password });
+      const response = await axios.post('https://blog-app-5fnw.onrender.com/auth/login', { username, password });
       localStorage.setItem('token', response.data.token);
       navigate('/');
     } catch (error) {
@@ -44,7 +44,7 @@ const Login = () => {
         <label htmlFor='password' className='label'>Password</label>
         <div className='input'>
           <input
-            type="password"
+            type={showPassword ? "text": "password"}
             id="password"
             placeholder="Password"
             className='password'
