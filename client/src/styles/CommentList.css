@@ -1,0 +1,51 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-textarea {
+    min-height: 40px;
+    padding: 8px;
+    border: 1px solid #a8a8a8;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-btn {
+    align-self: flex-start;
+    border: 1px solid #000000;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.user {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 567px) {
+    .comment-textarea {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .comment-textarea {
+        max-width: 30%;
+    }
+}
