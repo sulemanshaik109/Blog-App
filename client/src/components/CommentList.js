@@ -9,7 +9,7 @@ const CommentList = ({ postId }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/posts/${postId}/comments`);
+        const response = await axios.get(`https://blog-app-5fnw.onrender.com/posts/${postId}/comments`);
         setComments(response.data);
       } catch (error) {
         console.error('Error fetching comments:', error.response.data.message);
@@ -28,7 +28,7 @@ const CommentList = ({ postId }) => {
       await axios.post(`https://blog-app-5fnw.onrender.com/posts/${postId}/comments`, { post: postId, content: newComment }, { headers });
       setNewComment('');
       // Refresh comments
-      const response = await axios.get(`http://localhost:5000/posts/${postId}/comments`);
+      const response = await axios.get(`https://blog-app-5fnw.onrender.com/posts/${postId}/comments`);
       setComments(response.data);
     } catch (error) {
       console.error('Error posting comment:', error.response.data.message);
